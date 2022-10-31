@@ -16,3 +16,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  border: solid 1px;
+  padding: 5px;
+  border-radius: 3px;
+
+  margin-top: 3px;
+}
+
+input:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+th, td {
+  text-align: center;
+
+  padding: 5px 15px;
+}
+
+th {
+  font-weight: 600;
+}
