@@ -25,13 +25,12 @@ const Projects = observer(() => {
         avatar_url: ''
     })
 
-    // Данное состояние отображает, готовы ли 
-    // данные для заполнения в таблице
+    // // Данное состояние отображает, готовы ли 
+    // // данные для заполнения в таблице
     const [state, setState] = React.useState<boolean>(false)
 
     async function data_organization () {
-        // Отображаем loader
-        user.updateLoading(true)
+        
 
         setState(false)
 
@@ -51,15 +50,18 @@ const Projects = observer(() => {
         })
 
         setState(true)
-
-        // Скрываем loader
-        user.updateLoading(false)
     }
     
     React.useEffect(() => {
+        // Отображаем loader
+        user.updateLoading(true)
+
         user.updateLogin(login || '')
 
         data_organization()
+
+        // Скрываем loader
+        user.updateLoading(false)
     }, [])
 
     // Отслеживать изменения login необходимо

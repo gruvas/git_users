@@ -15,7 +15,7 @@ const Table = ({arr, login}: ITable) => {
     return (
         <div className='mt-6 rounded-[7px] overflow-x-auto'>
 
-            {arr.length == 0 
+            {arr.length === 0 
             
                 ?  (
                     <div className='text-center text-2xl font-semibold text-darkRed'>
@@ -62,9 +62,7 @@ const Table = ({arr, login}: ITable) => {
                         </tbody>
                     </table>
                 )
-
             }
-
         </div>
     );
 }
